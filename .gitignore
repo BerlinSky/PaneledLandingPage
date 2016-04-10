@@ -1,0 +1,4 @@
+# exclude bower_components section
+development/bower_components
+development/node_modules
+development/npm-debug.log
