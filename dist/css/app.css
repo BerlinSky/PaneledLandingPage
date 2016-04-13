@@ -4,12 +4,17 @@
 html, body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
   margin: 0;
   padding: 0; }
 
 .pictureFrame {
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.4s, -webkit-transform 0.4s ease;
+  transition: all 0.4s, -webkit-transform 0.4s ease;
+  transition: all 0.4s, transform 0.4s ease;
+  transition: all 0.4s, transform 0.4s ease, -webkit-transform 0.4s ease;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,15 +154,19 @@ html, body {
     width: 100px;
     height: 100px; }
 
-.test {
-  display: block;
+.transitionToTarget {
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0); }
+
+.targetFrame {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 100%;
   background: #000;
-  z-index: 1;
-  opacity: .2;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s; }
+  color: #fff;
+  -webkit-transition: all 0.4s, -webkit-transform 0.4s ease;
+  transition: all 0.4s, -webkit-transform 0.4s ease;
+  transition: all 0.4s, transform 0.4s ease;
+  transition: all 0.4s, transform 0.4s ease, -webkit-transform 0.4s ease; }

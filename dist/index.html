@@ -15,49 +15,69 @@
 </head>
 <body>
 
-	<div class="pictureFrame">
-    <div class="pictureFrame__panel pictureFrame__panel--one">
+	<div id="landingZone" class="pictureFrame">
+    <div class="pictureFrame__panel pictureFrame__panel--one" onclick="toTargetHome()">
 	    <!-- <div class="overlay"></div> -->
 	    <div class="postStamp">
-    		<img class="postStamp__img" src="image/gnrose-1.png" alt="">
+    		<img class="postStamp__img" src="image/window-checked.ico" alt="">
 	    	<div class="postStamp__text">
 	    		<h3 class="postStamp_textBox--heading">News</h3>
 	    		<span class="postStamp__textBox--body">An Artist</span>
 	    	</div>
 	    </div>
     </div>
-    <div class="pictureFrame__panel pictureFrame__panel--two">
+    <div class="pictureFrame__panel pictureFrame__panel--two" onclick="toTargetHome()"> 
     	<div class="postStamp">
-    		<img class="postStamp__img" src="image/gnrose-2.png" alt="">
+    		<img class="postStamp__img" src="image/analytics.ico" alt="">
 	    		<h3 class="postStamp_textBox--heading">Tour</h3>
 	    		<span class="postStamp__textBox--body">An Artist</span>
 	    </div>
     </div>
-    <div class="pictureFrame__panel pictureFrame__panel--three">
+    <div class="pictureFrame__panel pictureFrame__panel--three" onclick="toTargetHome()">
     	<div class="postStamp">
-    		<img class="postStamp__img" src="image/gnrose-3.png" alt="">
+    		<img class="postStamp__img" src="image/checklist.ico" alt="">
     		<h3 class="postStamp_textBox--heading">Photos</h3>
     		<span class="postStamp__textBox--body">An Artist</span>
 	    </div>
     </div>
-    <div class="pictureFrame__panel pictureFrame__panel--four">
+    <div class="pictureFrame__panel pictureFrame__panel--four" onclick="toTargetHome()">
     	<div class="postStamp">
-    		<img class="postStamp__img" src="image/gnrose-4.png" alt="">
+    		<img class="postStamp__img" src="image/html.ico" alt="">
     		<h3 class="postStamp_textBox--heading">Join</h3>
     		<span class="postStamp__textBox--body">An Artist</span>
 	    </div>
     </div>
-    <div class="pictureFrame__panel pictureFrame__panel--five">
+    <div class="pictureFrame__panel pictureFrame__panel--five" onclick="toTargetHome()">
     	<div class="postStamp">
-    		<img class="postStamp__img" src="image/gnrose-5.png" alt="">
+    		<img class="postStamp__img" src="image/shop.ico" alt="">
     		<h3 class="postStamp_textBox--heading">Store</h3>
     		<span class="postStamp__textBox--body">An Artist</span>
 	    </div>
     </div>
   </div>
 
+	<div id="targetHome" class="targetFrame">
+	  <div onclick="toLandingZone()">X</div>
+
+	  <iframe src="http://mastersite.vm722.signaturesnet.com/" frameborder="0" width="100%" height="100%"></iframe>
+	</div>
+
 	<!-- Application JS file -->
 	<!-- <script type="text/javascript" src="scripts/app-main.js"></script> -->
 
+<script>
+    var content = document.getElementById("landingZone");
+    var panel = document.getElementById("targetHome");
+
+    function toTargetHome() {
+        content.classList.add("transitionToTarget");
+        panel.classList.add("transitionToTarget");
+    }
+
+    function toLandingZone() {
+        content.classList.remove("transitionToTarget");
+        panel.classList.remove("transitionToTarget");
+    }
+</script>
 </body>
 </html>
